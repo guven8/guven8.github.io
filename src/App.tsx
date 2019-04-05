@@ -9,6 +9,7 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <p>
+            My name is Guven.
             I am a developer.
           </p>
         </header>
