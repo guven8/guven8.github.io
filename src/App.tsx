@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { Header } from './components/header';
-import './App.scss';
+import { Header } from './components/header/Header';
+import { MediaGallery } from './components/mediaGallery/MediaGallery';
+import { CssBaseline } from '@material-ui/core';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <>
+        <CssBaseline />
         <Header />
-        <div className="intro">
-          <p>
-            My name is Guven.
-            I am a web developer based in London.
-          </p>
+        <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
+          <MediaGallery />
         </div>
-      </div>
+      </>
     );
   }
 }
