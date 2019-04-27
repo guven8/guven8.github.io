@@ -1,12 +1,14 @@
 {
-  "main.js": "/static/js/main.ee2d77bb.chunk.js",
-  "main.js.map": "/static/js/main.ee2d77bb.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.5d8d2771.chunk.js": "/static/js/2.5d8d2771.chunk.js",
-  "static/js/2.5d8d2771.chunk.js.map": "/static/js/2.5d8d2771.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.bfc7735495712b5b1dea51b9354180d9.js": "/precache-manifest.bfc7735495712b5b1dea51b9354180d9.js",
-  "service-worker.js": "/service-worker.js",
-  "static/media/contemplative-reptile.jpg": "/static/media/contemplative-reptile.34dfeed2.jpg"
+  "files": {
+    "main.js": "/static/js/main.b9792085.chunk.js",
+    "main.js.map": "/static/js/main.b9792085.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.506d907f.chunk.js": "/static/js/2.506d907f.chunk.js",
+    "static/js/2.506d907f.chunk.js.map": "/static/js/2.506d907f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.813c2bb4796fbb8a0dcd007bc6ffaeff.js": "/precache-manifest.813c2bb4796fbb8a0dcd007bc6ffaeff.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/contemplative-reptile.jpg": "/static/media/contemplative-reptile.34dfeed2.jpg"
+  }
 }
