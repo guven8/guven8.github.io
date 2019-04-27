@@ -1,6 +1,6 @@
 import React from 'react'
 import { Home, Book, AccountBox } from '@material-ui/icons'
-import { ListItem, ListItemText, Typography, List, } from '@material-ui/core'
+import { ListItem, ListItemText, Typography, List } from '@material-ui/core'
 
 export const NavBar = () => {
   return (
