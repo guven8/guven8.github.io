@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   CardActionArea,
   Card,
@@ -7,10 +7,10 @@ import {
   Typography,
   CardActions,
   Button,
-  withStyles
-} from '@material-ui/core'
+  makeStyles
+} from "@material-ui/core";
 
-const styles = {
+const useStyles = makeStyles({
   card: {
     maxWidth: 345,
     margin: 15
@@ -18,16 +18,27 @@ const styles = {
   media: {
     height: 140
   }
-}
+});
 
-export const MediaCard = withStyles(styles)(({ classes, image, description }) => {
+type P = {
+  mediaItem: {
+    image: string;
+    title: string;
+    description: string;
+  };
+};
+
+export const MediaCard = (props: P) => {
+  const classes = useStyles();
+  const { image, title, description } = props.mediaItem;
+
   return (
     <Card className={classes.card} raised>
       <CardActionArea>
-        <CardMedia className={classes.media} image={image} title="Contemplative Reptile" />
+        <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {title}
           </Typography>
           <Typography component="p">{description}</Typography>
         </CardContent>
@@ -41,5 +52,5 @@ export const MediaCard = withStyles(styles)(({ classes, image, description }) =>
         </Button>
       </CardActions>
     </Card>
-  )
-})
+  );
+};

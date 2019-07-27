@@ -7,19 +7,19 @@ export const NavBar = () => {
     <List component="nav">
       <ListItem component="div">
         <ListItemText inset>
-          <Typography color="inherit" variant="title">
+          <Typography color="inherit" variant="h1">
             Home
             <Home />
           </Typography>
         </ListItemText>
         <ListItemText inset>
-          <Typography color="inherit" variant="title">
+          <Typography color="inherit" variant="h1">
             Posts
             <Book />
           </Typography>
         </ListItemText>
         <ListItemText inset>
-          <Typography color="inherit" variant="title">
+          <Typography color="inherit" variant="h1">
             Contact
             <AccountBox />
           </Typography>
