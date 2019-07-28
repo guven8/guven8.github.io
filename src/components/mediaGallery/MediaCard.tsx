@@ -13,7 +13,11 @@ import {
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
+    height: 385,
     margin: 15
+  },
+  description: {
+    height: 115
   },
   media: {
     height: 140
@@ -40,7 +44,9 @@ export const MediaCard = (props: P) => {
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography component="p">{description}</Typography>
+          <Typography className={classes.description} component="p">
+            {description}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>

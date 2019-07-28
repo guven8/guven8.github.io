@@ -1,7 +1,7 @@
 import * as React from "react";
 import { MediaCard } from "./MediaCard";
-import { Grid, makeStyles } from "@material-ui/core";
-import { mediaList } from "./mockedMedia";
+import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { mediaList } from "./mediaData";
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +15,9 @@ export const MediaGallery = () => {
 
   return (
     <div>
+      <Typography align="center" gutterBottom variant="h5" component="h2">
+        My Recent Projects
+      </Typography>
       <Grid container justify="center" className={classes.root}>
         {mediaList.map((media, i) => (
           <Grid item key={i}>
