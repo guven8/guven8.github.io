@@ -1,24 +1,20 @@
-import React from "react";
-import { CssBaseline, Container } from "@material-ui/core";
-import { Header } from "./components/header/Header";
-import { MainHeader } from "./components/mainHeader/MainHeader";
-import { MediaGallery } from "./components/mediaGallery/MediaGallery";
-import SimpleModal from "./components/Foo";
-import { Bio } from "./components/bio/Bio";
+import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { ProjectGallery } from './components/ProjectGallery';
+import { Footer } from './components/Footer';
 
-const App = () => {
+export function App() {
   return (
-    <>
+    <React.Fragment>
       <CssBaseline />
       <Header />
-      <Container maxWidth="md">
-        <MainHeader />
-        <Bio />
-        <MediaGallery />
-        <SimpleModal />
-      </Container>
-    </>
+      <main>
+        <Hero />
+        <ProjectGallery />
+      </main>
+      <Footer />
+    </React.Fragment>
   );
-};
-
-export default App;
+}

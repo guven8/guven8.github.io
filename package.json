@@ -8,11 +8,13 @@
     "@material-ui/icons": "^4.2.0",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
+    "@types/uuid": "^3.4.5",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
