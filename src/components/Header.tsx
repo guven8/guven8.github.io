@@ -6,10 +6,18 @@ import linkedinIcon from '../assets/linkedin-icon.png';
 
 const useStyles = makeStyles(theme => ({
   grow: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'none'
+    },
     flexGrow: 1
   },
   appBar: {
     backgroundColor: '#000'
+  },
+  toolbar: {
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'center'
+    }
   },
   icon: {
     marginRight: theme.spacing(2),
@@ -29,7 +37,7 @@ export const Header = () => {
   return (
     <AppBar position="relative" className={classes.appBar}>
       <Container maxWidth="md">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters className={classes.toolbar}>
           <div className={classes.grow} />
           <img src={angellistIcon} alt="angel list link" className={classes.icon} />
           <img src={githubIcon} alt="github link" className={classes.icon} />

@@ -1,71 +1,77 @@
 import React from 'react';
-import { Container, Typography, Button, Grid, makeStyles } from '@material-ui/core';
+import { Container, Typography, Button, Grid, Theme, makeStyles, createStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
-  '@keyframes ripple': {
-    '0%': {
-      transform: 'scale(0.8)'
+const useStyles = makeStyles((theme: Theme) => {
+  const { palette, spacing, breakpoints } = theme;
+  return createStyles({
+    '@keyframes ripple': {
+      '0%': {
+        transform: 'scale(0.8)'
+      },
+      '50%': {
+        transform: 'scale(1.2)'
+      },
+      '100%': {
+        transform: 'scale(0.8)'
+      }
     },
-    '50%': {
-      transform: 'scale(1.2)'
+    hero: {
+      backgroundColor: palette.background.paper,
+      padding: spacing(8, 0, 6),
+      position: 'relative',
+      [breakpoints.down('xs')]: {
+        padding: spacing(3, 1, 3),
+      }
     },
-    '100%': {
-      transform: 'scale(0.8)'
+    bgcircles: {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      overflow: 'hidden',
+      height: '100%'
+    },
+    bgcircle: {
+      position: 'absolute',
+      borderRadius: '50%',
+      willChange: 'transform',
+      border: '1px solid #BD24F6',
+      opacity: 0.2,
+      animation: '$ripple 10s ease-in-out infinite',
+      '&:first-child': {
+        left: '110px',
+        top: '-680px',
+        width: '1940px',
+        height: '1940px'
+      },
+      '&:nth-child(2)': {
+        left: '550px',
+        top: '-300px',
+        width: '1060px',
+        height: '1060px'
+      },
+      '&:nth-child(3)': {
+        left: '830px',
+        top: '-30px',
+        width: '500px',
+        height: '500px',
+      }
+    },
+    heroSummary: {
+      maxWidth: '600px'
+    },
+    heroButtons: {
+      marginTop: spacing(4),
+    },
+    gradientBG: {
+      background: `linear-gradient(45deg, ${palette.primary.main} 30%, ${palette.secondary.main} 90%)`
+    },
+    gradientBorder: {
+      borderColor: `linear-gradient(45deg, ${palette.primary.main} 30%, ${palette.secondary.main} 90%)`
     }
-  },
-  hero: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-    position: 'relative'
-  },
-  bgcircles: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    overflow: 'hidden',
-    height: '100%'
-  },
-  bgcircle: {
-    position: 'absolute',
-    borderRadius: '50%',
-    willChange: 'transform',
-    border: '1px solid #BD24F6',
-    opacity: 0.2,
-    animation: '$ripple 10s ease-in-out infinite',
-    '&:first-child': {
-      left: '110px',
-      top: '-680px',
-      width: '1940px',
-      height: '1940px'
-    },
-    '&:nth-child(2)': {
-      left: '550px',
-      top: '-300px',
-      width: '1060px',
-      height: '1060px'
-    },
-    '&:nth-child(3)': {
-      left: '830px',
-      top: '-30px',
-      width: '500px',
-      height: '500px',
-    }
-  },
-  heroSummary: {
-    maxWidth: '600px'
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  gradientBG: {
-    background: 'linear-gradient(45deg, #1a6dff 30%, #c822ff 90%)'
-  },
-  gradientBorder: {
-    borderColor: 'linear-gradient(45deg, #1a6dff 30%, #c822ff 90%)'
-  }
-}));
+  })
+});
 
 export const Hero = () => {
   const classes = useStyles();
@@ -92,7 +98,7 @@ export const Hero = () => {
               </Button>
             </Grid>
             <Grid item>
-              <Button variant="outlined" color="primary" className={classes.gradientBorder}>
+              <Button variant="outlined" color="secondary" className={classes.gradientBorder}>
                 Get in touch
               </Button>
             </Grid>
