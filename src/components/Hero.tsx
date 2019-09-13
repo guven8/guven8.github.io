@@ -1,61 +1,16 @@
 import React from 'react';
 import { Container, Typography, Button, Grid, Theme, makeStyles, createStyles } from '@material-ui/core';
+import { BackgroundAnimation } from './common/Animations';
 
 const useStyles = makeStyles((theme: Theme) => {
   const { palette, spacing, breakpoints } = theme;
   return createStyles({
-    '@keyframes ripple': {
-      '0%': {
-        transform: 'scale(0.8)'
-      },
-      '50%': {
-        transform: 'scale(1.2)'
-      },
-      '100%': {
-        transform: 'scale(0.8)'
-      }
-    },
     hero: {
       backgroundColor: palette.background.paper,
       padding: spacing(8, 0, 6),
       position: 'relative',
       [breakpoints.down('xs')]: {
         padding: spacing(3, 1, 3),
-      }
-    },
-    bgcircles: {
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      overflow: 'hidden',
-      height: '100%'
-    },
-    bgcircle: {
-      position: 'absolute',
-      borderRadius: '50%',
-      willChange: 'transform',
-      border: '1px solid #BD24F6',
-      opacity: 0.2,
-      animation: '$ripple 10s ease-in-out infinite',
-      '&:first-child': {
-        left: '110px',
-        top: '-680px',
-        width: '1940px',
-        height: '1940px'
-      },
-      '&:nth-child(2)': {
-        left: '550px',
-        top: '-300px',
-        width: '1060px',
-        height: '1060px'
-      },
-      '&:nth-child(3)': {
-        left: '830px',
-        top: '-30px',
-        width: '500px',
-        height: '500px',
       }
     },
     heroSummary: {
@@ -78,11 +33,7 @@ export const Hero = () => {
 
   return (
     <div className={classes.hero}>
-      <div className={classes.bgcircles}>
-        <div className={classes.bgcircle} />
-        <div className={classes.bgcircle} />
-        <div className={classes.bgcircle} />
-      </div>
+      <BackgroundAnimation type="circles-ripple" />
       <Container maxWidth="md">
         <Typography component="h1" variant="h2" align="left" color="textPrimary" gutterBottom>
           Guven Kemal
