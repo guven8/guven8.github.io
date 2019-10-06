@@ -4,15 +4,15 @@ import { Card, makeStyles, Theme, createStyles } from '@material-ui/core';
 import { BackgroundAnimation } from './common/Animations';
 
 const useStyles = makeStyles((theme: Theme) => {
-  const { palette } = theme;
+  // const { palette } = theme;
   return createStyles({
     contact: {
       // backgroundColor: theme.palette.background.default,
-      backgroundColor: 'black',
+      backgroundColor: 'white',
       padding: theme.spacing(8, 0, 6),
       position: 'relative',
       [theme.breakpoints.down('xs')]: {
-        padding: theme.spacing(3, 1, 3),
+        padding: theme.spacing(3, 1, 3)
       }
     }
   });
@@ -35,4 +35,4 @@ export const Contact = () => {
       </Section>
     </div>
   );
-}
+};

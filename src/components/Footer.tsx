@@ -1,25 +1,21 @@
 import React from 'react';
 import { makeStyles, Typography, Link } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+    padding: theme.spacing(6)
+  }
 }));
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://guvenkemal.dev/">
+        guvenkemal.dev
       </Link>{' '}
       {new Date().getFullYear()}
-      {'. Built with '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI.
-      </Link>
     </Typography>
   );
 }
@@ -29,13 +25,15 @@ export const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-    </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
-    </Typography>
+      <Typography
+        variant="subtitle1"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        Designed and coded by Guven Kemal
+      </Typography>
       <Copyright />
     </footer>
   );
-}
+};

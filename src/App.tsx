@@ -9,10 +9,10 @@ import { Contact } from './components/Contact';
 // import { indigo, pink, red } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
-  palette: {
-    primary: { main: '#1a6dff' },
-    secondary: { main: '#c822ff' }
-  }
+  // palette: {
+  // primary: { main: '#1a6dff' },
+  // secondary: { main: '#c822ff' }
+  // }
   // palette: {
   //   primary: indigo,
   //   secondary: pink,
@@ -29,7 +29,7 @@ export function App() {
         <main>
           <Hero />
           <Projects />
-          <Contact />
+          {/* <Contact /> */}
         </main>
         <Footer />
       </React.Fragment>

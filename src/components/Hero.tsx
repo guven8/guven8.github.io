@@ -40,6 +40,7 @@ export const Hero = () => {
         </Typography>
         <Typography variant="h5" align="left" color="textSecondary" paragraph className={classes.heroSummary}>
           I'm a front end web developer, based in London. I specialise in React. Check out my recent work below.
+          This website is currently under construction.
         </Typography>
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justify="flex-start">
