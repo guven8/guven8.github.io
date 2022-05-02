@@ -1,0 +1,151 @@
+@keyframes ripple {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+@keyframes rising {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+    border-radius: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px) rotate(720deg);
+    border-radius: 50%;
+  }
+}
+.circlesRipple {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.circlesRipple li {
+  border: 1px solid #f50057;
+  display: block;
+  opacity: 0.2;
+  position: absolute;
+  animation: ripple 10s ease-in-out infinite;
+  list-style: none;
+  will-change: transform;
+  border-radius: 50%;
+}
+.circlesRipple li:first-child {
+  top: -680px;
+  left: 110px;
+  width: 1940px;
+  height: 1940px;
+}
+.circlesRipple li:nth-child(2) {
+  top: -300px;
+  left: 550px;
+  width: 1060px;
+  height: 1060px;
+}
+.circlesRipple li:nth-child(3) {
+  top: -30px;
+  left: 830px;
+  width: 500px;
+  height: 500px;
+}
+.circlesRise {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.circlesRise li {
+  width: 20px;
+  bottom: -150px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  animation: rising 15s linear infinite;
+  background: linear-gradient(45deg, #3f51b5 30%, #f50057 90%);
+  list-style: none;
+  background-size: cover;
+}
+.circlesRise li:nth-child(1n) {
+  background-image: url(/github-icon.png);
+}
+.circlesRise li:nth-child(2n) {
+  background-image: url(/linkedin-icon.png);
+}
+.circlesRise li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.circlesRise li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circlesRise li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+.circlesRise li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.circlesRise li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+.circlesRise li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+.circlesRise li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+.circlesRise li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+.circlesRise li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+.circlesRise li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}

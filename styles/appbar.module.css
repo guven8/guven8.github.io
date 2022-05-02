@@ -1,0 +1,38 @@
+.appbar {
+  background: #000;
+  color: white;
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 896px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+}
