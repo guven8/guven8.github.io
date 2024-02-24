@@ -18,14 +18,6 @@ const Home: NextPage = () => {
         <p className={styles.description}>I build websites</p>
 
         <div className={styles.grid}>
-          <a href="https://33jiujitsu.co.uk" className={styles.card}>
-            <h2>33JiuJitsu.co.uk</h2>
-            <p>
-              A North London based jiu jitsu gym instructed by 1st Dan Black
-              Belt and British Jiu Jitsu Champion Jack Cronin
-            </p>
-          </a>
-
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
